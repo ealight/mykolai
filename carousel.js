@@ -40,20 +40,20 @@ $(document).ready(function() {
                             $(".hidable").show(1000, function() {
                                 $(".open-magic-container").show();
                                 $("video").each(function(){ $(this).hide(); });
+								if(current == 3) {
+									$(".open-magic-container").css("opacity", "0");
+									$(".hidable").css("opacity", "0");
+									$(".kiss").show(5000, function(){
+										$(".kiss").hide(5000, function() {
+											$(".open-magic-container").css("opacity", "1");
+											$(".hidable").css("opacity", "1");      
+										})
+									});
+
+									current = 0;
+								}
                             })
                         })
-                        if(current == 3) {
-                            $(".open-magic-container").css("opacity", "0");
-                            $(".hidable").css("opacity", "0");
-                            $(".kiss").show(5000, function(){
-                                $(".kiss").hide(5000, function() {
-                                    $(".open-magic-container").css("opacity", "1");
-                                    $(".hidable").css("opacity", "1");      
-                                })
-                            });
-
-                            current = 0;
-                        }
                     },  timelines[current - 1] + 1000);
 
                     $(".open-magic").text(button_text[current - 1]);
