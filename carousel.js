@@ -19,8 +19,8 @@ $(document).ready(function() {
     $(".container").hide();
     $(".kiss").hide();
   
-    let timelines = [54000, 43000, 181000];
-    let button_text = ["Йдемо далі?", "Останненьке :)"];
+    let timelines = [34000, 58000, 47000];
+    let button_text = ["Давай згадувати", "І красунечка"];
     let current = 0;
 
     $(".open-magic").click(function() {
